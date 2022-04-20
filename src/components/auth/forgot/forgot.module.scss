@@ -1,0 +1,27 @@
+.block {
+  width: 100%;
+  height: 600px;
+  display: grid;
+  grid-template-rows: auto;
+  //text-align: center;
+  //justify-content: center;
+  background-color: rgba(102, 95, 92, 0.68);
+  color: white;
+  .blockInh{
+    height: 50px;
+    padding-left: 30px;
+    margin: 0 auto;
+    label{
+      margin-right: 20px;
+    }
+    h3{
+      font-size: 30px;
+      padding-top: 30px;
+      font-family: 'Serifiqo';
+      color: white;
+    }
+    button{
+      height: 30px;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@mixin category {
+  background-color: rgba(255, 255, 255, 0.58);
+  margin-top: 7px;
+  height: 20px;
+  text-align: center;
+}
+
+.item {
+  margin: 20px auto;
+  max-width: 800px;
+  height: 650px;
+  background-color: rgb(223, 237, 240);
+  border: 1px solid rgba(102, 95, 92, 0.32);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  .grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'i n'
+      'i c'
+      'i t'
+      'i h'
+      'i s'
+      'd d';
+
+    .image {
+      grid-area: i;
+      background-image: url("https://img.delo-vcusa.ru/2019/11/Pasta-po-toskanski.jpg");
+      background-size: cover;
+      width: 400px;
+      height: 300px;
+      margin-right: 20px;
+    }
+
+    .name {
+      grid-area: n;
+      @include category;
+    }
+
+    .cat {
+      grid-area: c;
+      @include category;
+    }
+
+    .cat2 {
+      grid-area: t;
+      @include category;
+    }
+
+    .cat3 {
+      grid-area: h;
+      @include category;
+    }
+
+    .cat4 {
+      grid-area: s;
+      @include category;
+    }
+
+    .block {
+      grid-area: d;
+      @include category;
+      height: 300px;
+    }
+
+    p {
+      margin: 15px;
+      text-align: left;
+    }
+  }
+
+}

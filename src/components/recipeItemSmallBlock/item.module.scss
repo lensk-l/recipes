@@ -1,0 +1,51 @@
+.item {
+  margin-top: 20px;
+  max-width: 300px;
+  height: 350px;
+  background-color: rgb(223, 237, 240);
+  border: 1px solid rgba(102, 95, 92, 0.32);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  .image {
+    background-size: cover;
+    width: 100%;
+    height: 150px;
+  }
+  .grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    span{
+      margin-left: 10px;
+    }
+    .name{
+      background-color: rgba(255, 255, 255, 0.58);
+      text-align: center;
+      margin-top: 7px;
+      height: 20px;
+    }
+    .cat{
+      background-color: rgba(255, 255, 255, 0.58);
+      margin-top: 7px;
+      height: 20px;
+      text-align: center;
+    }
+    .cat2{
+      background-color: rgba(255, 255, 255, 0.58);
+      margin-top: 7px;
+      height: 23px;
+      text-align: left;
+    }
+    .block{
+      background-color: rgba(255, 255, 255, 0.58);
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      height: 40px;
+
+      button{
+        height: 30px;
+      }
+    }
+  }
+
+}

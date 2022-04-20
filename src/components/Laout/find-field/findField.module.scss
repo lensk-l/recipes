@@ -1,0 +1,93 @@
+
+.fieldBlock {
+  min-height: 50px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  column-gap: 20px;
+  background-color: rgba(102, 94, 91, 0.63);
+
+
+  .leftPart {
+    margin-top: 10px;
+    text-align: right;
+    p {
+      font-family: "Serif", serif;
+      font-weight: lighter;
+      font-size: 25px;
+      margin: 3px auto;
+      color: white;
+    }
+  }
+
+  .rightPart {
+    display: flex;
+    text-align: left;
+    margin-top: 10px;
+    div{
+      input{
+        width: 350px;
+        height: 25px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.customBtn {
+  width: 130px;
+  height: 30px;
+  border-radius: 5px;
+  background-size: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.59);
+  outline: none;
+  border: none;
+}
+
+.customBtn:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.customBtn:hover {
+  color: #000;
+}
+.customBtn:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.customBtn:active {
+  top: 2px;
+}
+@media (max-width: 768px) {
+  .fieldBlock{
+    display: flex;
+    flex-direction: column;
+  }
+  .leftPart{
+    p{
+      text-align: center;
+    }
+  }
+  .rightPart{
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    text-align: center;
+    button{
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+  }
+
+
+}

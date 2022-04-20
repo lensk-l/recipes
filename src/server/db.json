@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Petya",
+      "email": "l.hlaponina@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "name": "Vasya",
+      "email": "l.vasya@gmail.com",
+      "password": "54321"
+    }
+  ],
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Суп",
+      "img": "https://klopotenko.com/wp-content/uploads/2018/05/Meksikanskiy-sup_siteWEB.jpg",
+      "category": "Супы",
+      "categoryAlias": "sops",
+      "difficulty": 1,
+      "stars": 2,
+      "time": 25,
+      "description": "Готовить этот рецепт нужно так"
+    },
+    {
+      "id": 2,
+      "name": "Каша",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa3mqjhR_R_P60JO0Sr3WRN5-0RqPoIjcOXAhKlDFHlCObxBldq2LzW9cBZt5NeAf49SA&usqp=CAU",
+      "category": "Вторые блюда",
+      "categoryAlias": "mainCourse",
+      "difficulty": 3,
+      "stars": 3,
+      "time": 15,
+      "description": "Готовить этот рецепт нужно так"
+    },
+    {
+      "id": 3,
+      "name": "Суши",
+      "img":  "https://img.championat.com/news/big/w/q/pochemu-sushi-vredny-dlja-figury_1590677088981164064.jpg" ,
+      "category": "другое",
+      "categoryAlias": "other",
+      "difficulty": 100500,
+      "stars": 5,
+      "time": 100,
+      "description": "Готовить этот рецепт нужно так"
+    },
+    {
+      "id": 4,
+      "name": "Суши",
+      "img": "https://us.123rf.com/450wm/ryzhkov86/ryzhkov861208/ryzhkov86120800019/14967773-cocina-japonesa-sushi-nigiri-salm%C3%B3n-establecer-y-sashimi-con-gunkan-maki-sushi-con-red-roe.jpg?ver=6",
+      "category": "другое",
+      "categoryAlias": "other",
+      "difficulty": 100500,
+      "stars": 5,
+      "time": 100,
+      "description": "Готовить этот рецепт нужно так"
+    }
+  ]
+}

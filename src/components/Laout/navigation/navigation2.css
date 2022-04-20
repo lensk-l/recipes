@@ -1,0 +1,44 @@
+.wrap {
+  text-align: center;
+  padding-top: 8px;
+}
+.wrap .nav {
+  max-width: fit-content;
+  height: 60px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-left: 0;
+  list-style: none;
+  background: rgba(102, 94, 91, 0.71);
+}
+
+.wrap a {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Serif", serif;
+  font-weight: lighter;
+  font-size: 19px;
+  transition: 1s;
+  padding: 1.1em;
+}
+.wrap a:hover {
+  transition: 1s;
+  background: rgba(255, 255, 255, 0.4);
+  color: #000;
+  font-size: 20px;
+}
+
+.wrap .nav .active {
+  transition: 1s;
+  background: rgba(255, 255, 255, 0.7);
+  color: #000;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=navigation.module.css.map */
