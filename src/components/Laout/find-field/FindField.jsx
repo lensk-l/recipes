@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './findField.module.css';
-import MySelect from "../../common-components/Select/Select";
+import MySelect from "../../common-components/Selects/SelectMultiple";
 
 
 const FindField = () => {

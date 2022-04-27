@@ -1,21 +1,21 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useLayoutEffect, useState} from "react";
 import s from "../latest-receipes/latatest.module.css";
 import ItemRecipe from "../recipeItemSmallBlock/ItemRecipe";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchAllRecipes} from "../../store/recipesSlice";
+import {fetchAllRecipes} from "../../store/recipesAllSlice";
 
 
 const AllRecipes = () => {
-
     const dispatch = useDispatch();
-    useEffect(()=> {
+
+    useLayoutEffect(()=> {
         dispatch(fetchAllRecipes())
-    }, [dispatch])
+    }, [dispatch]);
 
-
-   const recipes = useSelector(state => state.rootReducers.recipesRed.recipesAll);
+    const recipes = useSelector(state => state.rootReducers.recipesAllRed.recipesAll)
 
     return (
+
         <div>
             <h3>Все рецепты</h3>
             <div className={s.block}>

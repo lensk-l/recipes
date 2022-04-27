@@ -1,10 +1,10 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit'
-import recipesSlice from './recipesSlice'
+import recipesAllSlice from './recipesAllSlice'
+
 
 
 const rootReducers = combineReducers({
-    //users: usersSlice,
-    recipesRed: recipesSlice,
+    recipesAllRed: recipesAllSlice,
 })
 
 const store = configureStore({

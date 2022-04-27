@@ -21,6 +21,7 @@
       'i n'
       'i c'
       'i t'
+      'i q'
       'i h'
       'i s'
       'd d';
@@ -49,9 +50,23 @@
       @include category;
     }
 
+    .cat5 {
+      grid-area: q;
+      @include category;
+    }
+
     .cat3 {
       grid-area: h;
       @include category;
+      height: fit-content;
+      span{
+        text-decoration: underline;
+        margin-bottom: 10px;
+      }
+      li{
+        text-align: left;
+        list-style-position: inside;
+      }
     }
 
     .cat4 {

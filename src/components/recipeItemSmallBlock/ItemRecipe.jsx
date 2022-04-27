@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 
 
 const ItemRecipe = (recipe) => {
+    console.log('render miniRecipe')
 
     return (
         <div className={s.item}>
@@ -14,8 +15,10 @@ const ItemRecipe = (recipe) => {
                 <div className={s.cat2}><span>Время приготовления: {recipe.time} минут</span></div>
                 <div className={s.cat2}><span>Уровень сложности: {recipe.difficulty}</span></div>
                 <div className={s.cat2}><span>Рейтинг : {recipe.stars}</span></div>
+                <div className={s.blockDescr}>
+                    <div className={s.describe}>{recipe.description}</div>
+                </div>
                 <div className={s.block}>
-                    <div>{recipe.description}</div>
                     <button><Link to={`/recipes/${recipe.id}`} key={'id'} >готовить</Link></button>
                 </div>
             </div>

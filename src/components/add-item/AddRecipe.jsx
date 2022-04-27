@@ -1,75 +1,139 @@
-import React from "react";
-import  s from './addItem.module.css'
-import Select from "react-select";
+import React, {useEffect, useState} from "react";
+import s from './addItem.module.css'
+import {useFormik} from "formik";
+import {fetchAddRecipe, fetchAllCetegories} from "../../store/recipesAllSlice";
+import {useDispatch} from "react-redux";
+import { useNavigate} from 'react-router-dom';
+
 
 const AddRecipe = () => {
-    const options = [
-        { value: 1, label: 1 },
-        { value: 2, label: 2 },
-        { value: 3, label: 3 },
-        { value: 4, label: 4 },
-        { value: 5, label: 5 }
-    ];
-    const optionsCategory = [
-        { value: 1, label: 'Суп' },
-        { value: 2, label: 'Основное блюдо' },
-        { value: 3, label: 'Салат'},
-        { value: 4, label: 'Напиток' },
-        { value: 5, label: 'Другое' }
-    ];
-    return <div className={s.addForm}>
+
+    const [categories, setCategories] = useState([]);
+    const [index, setIndex] = useState(0);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            difficulty: '',
+            category: '',
+            img: '',
+            description: '',
+            ingredients: [],
+        },
+        onSubmit: values => {
+            let data = JSON.stringify(values, null, 2);
+            dispatch(fetchAddRecipe(data));
+            navigate(`/recipes/6`);
+        },
+    });
+
+
+    useEffect(() => {
+        dispatch(fetchAllCetegories()).then(response => {
+            setCategories(response.payload)
+        })
+    }, [dispatch]);
+
+
+    return (
+        <>
+         <div className={s.addForm}>
         <div className={s.loginWrap}>
             <div className={s.loginHtml}>
                 <div className={s.loginForm}>
-                    <div className="">
-                        <h3 className={s.title}>Добавить рецепт</h3>
-                        <div className={`${s.group} ${s.flex}`}>
-                            <label htmlFor="name" className={s.label}>название</label>
-                            <input id="name" type="text" className={s.input}/>
-                            <label htmlFor="category"className={s.label}>категория</label>
-                            <Select
-                                theme={(theme) => ({
-                                    ...theme,
-                                    margin: 0,
-                                    borderRadius: 0,
-                                    colors: {
-                                        ...theme.colors,
-                                        primary25: 'rgba(102, 94, 91, 0.63)',
-                                        primary: 'rgba(102, 94, 91, 1)',
-                                    },
-                                })}
-                                options={optionsCategory}
-                            />
+                    <form onSubmit={formik.handleSubmit}>
+                        <div className="">
+                            <h3 className={s.title}>Добавить рецепт</h3>
+                            <div className={`${s.group} ${s.flex}`}>
+                                <label htmlFor="name" className={s.label}>название</label>
+                                <input id="name"
+                                       type="text"
+                                       onChange={formik.handleChange}
+                                       onBlur={formik.handleBlur}
+                                       value={formik.values.name}
+                                       className={s.input}/>
+                                {formik.errors.name ? <div>{formik.errors.name}</div> : null}
+                                <label htmlFor="category" className={s.label}>Категория</label>
+                                <select
+                                    name="category"
+                                    id="category"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.category}>
+                                    {categories.map(el => (
+                                        <option key={el.id} value={el.id}>{el.alias}</option>))}
+                                    <option disabled value="">Выберете категорию</option>
+                                </select>
+                            </div>
+                            <div className={`${s.group} ${s.flex}`}>
+                                <label htmlFor="difficulty " className={s.label}>Сложность</label>
+                                <select
+                                    id="difficulty"
+                                    name="difficulty"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.difficulty}
+                                >
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option disabled value="">Выберете сложность</option>
+                                </select>
+                                <label htmlFor="img " className={s.label}>Фото блюда</label>
+                                <input id="img " type="file" className={s.input}/>
+                            </div>
+                            <div className={`${s.group} ${s.flex} ${s.group2}`}>
+                                <label htmlFor="ingredients " className={s.label}>Ингридиенты:</label>
+                                <input
+                                    id="ingredients"
+                                    name="ingredients[0]"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.ingredients[0]}
+                                />
+                                <input
+                                    id="ingredients"
+                                    name="ingredients[1]"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.ingredients[1]}
+                                />
+                                <input
+                                    id="ingredients"
+                                    name="ingredients[2]"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.ingredients[2]}
+                                />
+
+                                <label htmlFor="img " className={s.label}>Фото блюда</label>
+                                <input id="img " type="file" className={s.input}/>
+                            </div>
+                            <div className={s.group}>
+                                <label htmlFor="description" className={s.label}>способ приготовление</label>
+                                <textarea name="description"
+                                          id="description"
+                                          onChange={formik.handleChange}
+                                          onBlur={formik.handleBlur}
+                                          value={formik.values.description}
+                                          className={s.input}/>
+                            </div>
+                            <div className={s.group}>
+                                <button type="submit" className={s.button} value="Отправить">Загрузить</button>
+                            </div>
                         </div>
-                        <div className={`${s.group} ${s.flex}`}>
-                            <label htmlFor="difficulty " className={s.label}>сложность</label>
-                            <Select
-                                    theme={(theme) => ({
-                                        ...theme,
-                                        margin: 0,
-                                        borderRadius: 0,
-                                        colors: {
-                                            ...theme.colors,
-                                            primary25: 'rgba(102, 94, 91, 0.63)',
-                                            primary: 'rgba(102, 94, 91, 1)',
-                                        },
-                                    })}
-                                    options={options}
-                            />
-                            <label htmlFor="img " className={s.label}>Фото блюда</label>
-                            <input id="img " type="file" className={s.input} />
-                        </div>
-                        <div className={s.group}>
-                            <label htmlFor="description" className={s.label}>способ приготовление</label>
-                            <textarea id="description" className={s.input}/>
-                        </div>
-                        <div className={s.group}>
-                            <input type="submit" className={s.button} value="Отправить"/>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+        </>
+    )
 }
+
 export default AddRecipe;

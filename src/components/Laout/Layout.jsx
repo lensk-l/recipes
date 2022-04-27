@@ -6,7 +6,7 @@ import FindField from "./find-field/FindField";
 
 const Layout = () => {
 
-
+    console.log('render Layout')
 
     return(
         <>

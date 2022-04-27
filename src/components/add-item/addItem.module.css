@@ -134,6 +134,19 @@ a {
 .loginForm .group .check:checked + label .icon {
     background: #a06800;
 }
+.loginForm .group2 label .icon:after {
+    top: 6px;
+    right: 0;
+    transform: scale(0) rotate(0);
+}
+
+.loginForm .group2 .check:checked + label {
+    color: #fff;
+}
+
+.loginForm .group2 .check:checked + label .icon {
+    background: #a06800;
+}
 
 .hr {
     height: 2px;
@@ -149,4 +162,17 @@ textarea {
     resize: none;
     height: 100px !important;
     width: 750px !important;
+}
+
+.group2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+.group2 input{
+    width: 160px;
+    height: 30px;
+}
+.group2 button{
+    width: 30px;
 }
