@@ -1,4 +1,4 @@
-import React, {useEffect, useLayoutEffect, useState} from "react";
+import React, {useLayoutEffect} from "react";
 import s from "../latest-receipes/latatest.module.css";
 import ItemRecipe from "../recipeItemSmallBlock/ItemRecipe";
 import {useDispatch, useSelector} from "react-redux";
@@ -19,10 +19,10 @@ const AllRecipes = () => {
         <div>
             <h3>Все рецепты</h3>
             <div className={s.block}>
-                {recipes.map((recipe) => (
+                {recipes.map((recipe, index) => (
                     <ItemRecipe
                         {...recipe}
-                        key={recipe.id}
+                        key={index}
                     />))}
             </div>
         </div>

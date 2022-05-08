@@ -36,112 +36,46 @@
       "description": "Рецепты супов невероятно разнообразны. Горячие и холодные, легкие и очень сытные, прозрачные и густые, жидкие и супы-кремы — супы бывают такими разными!"
     },
     {
-      "id": 2,
-      "name": "Каша",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa3mqjhR_R_P60JO0Sr3WRN5-0RqPoIjcOXAhKlDFHlCObxBldq2LzW9cBZt5NeAf49SA&usqp=CAU",
-      "category": "Вторые блюда",
-      "categoryAlias": "mainCourse",
+      "id": 1,
+      "name": "Суп",
+      "img": "https://lafoy.ru/photo_s/supy-na-kazhdyy-den-recepty-foto-1310-0.jpg",
+      "category": "Супы",
+      "categoryAlias": "sops",
       "ingredients": [
+        "картошка",
+        "морковь",
+        "лук",
+        "мясо",
         "картошка",
         "морковь",
         "лук",
         "мясо"
       ],
-      "difficulty": 3,
-      "stars": 3,
-      "time": 15,
-      "description": "Интересный рецепт рисовой каши - с добавлением тёртых яблок. Привычная рисовая каша на молоке готовится простым, но весьма оригинальным способом, что делает кашу не только молочной, но и по-настоящему яблочной. Несложный и очень вкусный завтрак!"
+      "difficulty": 1,
+      "stars": 2,
+      "time": 25,
+      "description": "Рецепты супов невероятно разнообразны. Горячие и холодные, легкие и очень сытные, прозрачные и густые, жидкие и супы-кремы — супы бывают такими разными!"
     },
     {
-      "id": 3,
-      "name": "Суши",
-      "img": "https://img.championat.com/news/big/w/q/pochemu-sushi-vredny-dlja-figury_1590677088981164064.jpg",
-      "category": "другое",
-      "categoryAlias": "other",
+      "id": 1,
+      "name": "Суп",
+      "img": "https://lafoy.ru/photo_s/supy-na-kazhdyy-den-recepty-foto-1310-0.jpg",
+      "category": "Супы",
+      "categoryAlias": "sops",
       "ingredients": [
+        "картошка",
+        "морковь",
+        "лук",
+        "мясо",
         "картошка",
         "морковь",
         "лук",
         "мясо"
       ],
-      "difficulty": 100500,
-      "stars": 5,
-      "time": 100,
-      "description": "Рецепт риса для суши не очень сложный, а сам процесс состоит из нескольких этапов: Сначала рис нужно тщательно промыть, чтобы убрать из крупы шелуху и .."
-    },
-    {
-      "id": 4,
-      "name": "Суши",
-      "img": "https://us.123rf.com/450wm/ryzhkov86/ryzhkov861208/ryzhkov86120800019/14967773-cocina-japonesa-sushi-nigiri-salm%C3%B3n-establecer-y-sashimi-con-gunkan-maki-sushi-con-red-roe.jpg?ver=6",
-      "category": "другое",
-      "categoryAlias": "other",
-      "ingredients": [
-        "картошка",
-        "морковь",
-        "лук",
-        "мясо"
-      ],
-      "difficulty": 100500,
-      "stars": 5,
-      "time": 100,
-      "description": "Представляю Вашему вниманию рецепт приготовления самых простых суши-роллов - маки (норимаки). Данные роллы я рекомендую к приготовлению людям,"
-    },
-    {
-      "name": "ййййй",
-      "difficulty": "4",
-      "category": "3",
-      "img": "",
-      "description": "лллллл",
-      "id": 5
-    },
-    {
-      "name": "Название",
-      "difficulty": "1",
-      "category": "2",
-      "img": "",
-      "description": "описание",
-      "id": 6
-    },
-    {
-      "name": "1",
-      "difficulty": "3",
-      "category": "2",
-      "img": "",
-      "description": "текст",
-      "id": 7
-    },
-    {
-      "name": "рецепт",
-      "difficulty": "3",
-      "category": "1",
-      "img": "",
-      "description": "описание",
-      "ingredients": "Мука, хлеб, соль",
-      "id": 8
-    },
-    {
-      "name": "имя",
-      "difficulty": "4",
-      "category": "3",
-      "img": "",
-      "description": "аоуаоуоашщ",
-      "ingredients": [
-        "один"
-      ],
-      "id": 9
-    },
-    {
-      "name": "",
-      "difficulty": "",
-      "category": "",
-      "img": "",
-      "description": "",
-      "ingredients": [
-        "такой",
-        "Сякой",
-        "вот такой"
-      ],
-      "id": 10
+      "difficulty": 1,
+      "stars": 2,
+      "time": 25,
+      "description": "Рецепты супов невероятно разнообразны. Горячие и холодные, легкие и очень сытные, прозрачные и густые, жидкие и супы-кремы — супы бывают такими разными!"
     }
   ],
   "categories": [

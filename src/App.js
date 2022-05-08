@@ -7,7 +7,6 @@ import Auth from "./components/auth/Auth";
 import AllRecipes from "./components/all-recipes/AllRecipes";
 import AddRecipe from "./components/add-item/AddRecipe";
 import RecipeItem from "./components/recipeItemBigBlock/RecipeItem";
-import SignupForm from "./components/add-item/AddRecipe";
 import {useDispatch} from "react-redux";
 import {fetchAllRecipes} from "./store/recipesAllSlice";
 
@@ -17,7 +16,7 @@ function App() {
     const dispatch = useDispatch();
 
     useEffect( () => {
-        dispatch(fetchAllRecipes)
+        dispatch(fetchAllRecipes())
     },[]);
 
     return (

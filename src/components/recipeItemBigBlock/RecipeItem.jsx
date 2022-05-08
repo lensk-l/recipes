@@ -27,18 +27,17 @@ const RecipeItem = () => {
                 </div>
                      <div className={s.name}>{recipe.name}</div>
                 <div className={s.cat}>{recipe.category}</div>
-                <div className={s.cat2}><span>Время приготовления:{recipe.time}минут</span></div>
+                <div className={s.cat2}><span>Время приготовления: {recipe.time} (мин)</span></div>
                 <div className={s.cat5}><span>Уровень сложности: {recipe.difficulty}</span></div>
                 <div className={s.cat3}><span>Ингридиенты:</span>
                     { recipe.ingredients
-                        ?(recipe.ingredients.map(item => (
-                            <li key={item}>
+                        ?(recipe.ingredients.map((item, index) => (
+                            <li key={index}>
                                 {item}
                             </li>)))
                         : (recipe.ingredients = [])
                     }
                 </div>
-                <div className={s.cat4}><span>Рейтинг : {recipe.difficulty} звезд</span></div>
                 <div className={s.block}>
                     <div><p>{recipe.description}</p></div>
                 </div>
